@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+void contador(int num, int cont = 0);
+int main() {
+
+	contador(20); // cada chamada da função contador vai imprimir o número atual do contador até o número indicado, nesse caso 20
+
+	return 0;
+}
+
+	
+// função onde ela fará uma contagem, vai escrever os nº na tela até onde eu indicar
+/*void contador(int num) { // função sem recursividade
+	for (int i = 0; i <= num; i++) {
+		cout << i << "\n";
+	}
+	} */
+void contador(int num, int cont) { // função com recursividade
+	cout << cont << "\n";
+	if (num > cont) {
+		contador(num, ++cont); // chamada recursiva da função e o cont tem que ser pré-incrementado para não entrar em loop infinito
+	}
+}
+
+// recursividade é quando a função chama a si própria
