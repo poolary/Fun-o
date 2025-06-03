@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+// Isso se chama prototipação de função, é uma forma de declarar a função antes de usá-la, prototipar
+// tem que declarar a função antes de usar, ou seja, antes do main
+
+void texto(); // função que não recebe nenhum argumento, mas pode ser chamada dentro do main
+void soma(int n1, int n2); // declarando a função soma que recebe dois argumentos, n1 e n2
+int soma2(int n1, int n2); // declarando a função soma2 que recebe dois argumentos, n1 e n2, e retorna a soma deles
+void  tr(string tra[4]); // declarando a função tr que recebe um vetor de strings com 4 elementos
+
+int main() {
+
+	/*texto(); // e se eu precisar chamar a função, eu posso chamar ela quantas vezes eu quiser, não preciso repetir o código
+	texto();
+	texto(); // chamando a função 3 vezes, vai imprimir 3 vezes a mesma coisa */
+
+	/*for (int i = 0; i < 10; i++) {
+		texto(); // chamando a função dentro do for, vai imprimir 10 vezes a mesma coisa
+	} */
+
+	int res;
+	string transp[4] = { "Carro", "Moto", "Barco", "Aviao" }; // criando um vetor de strings com 4 elementos, cada elemento é uma string
+
+	soma(15, 17); // chamando a função soma com os argumentos 15 e 17, vai imprimir a soma deles. pode ser qualquer valor
+	res = soma2(175, 90);
+
+	cout << "Valor de res e: " << res << "\n";
+	cout << "O valor e: " << soma2(100, 25) << "\n"; // pode ser de qualquer um desses jeitos, não importa 
+	tr(transp); // chamando a função tr com o vetor transp, vai imprimir cada elemento do vetor
+
+	return 0;
+}
+
+
+void texto() { // void significa que não retorna nada, nenhum valor, dentro dos () adiciona o argumento e tem que dar nome
+	cout << "\nEu sou mt free fire\n"; // o valor sempre retorna assim que chamado
+}
+
+void soma(int n1, int n2){ //funçao que recebe dois argumentos, n1 e n2, e soma eles, no void não pede return
+	cout << "Soma dos valores: " << n1 + n2 << "\n";
+}
+
+int soma2(int n1, int n2) {
+	return n1 + n2; // função que recebe dois argumentos, n1 e n2, e retorna a soma deles, no int pede return
+}
+void  tr(string tra[4]) {
+	for (int i = 0; i < 4; i++) { // função que recebe um vetor de strings e imprime cada elemento do vetor
+		cout << tra[i] << "\n"; // imprime o elemento i do vetor tra
+	}
+}
