@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+void imp(string txt = "Duduzin"); // para dxar o imp no int main() sem argumentos tem que definir o argumento como string com valor padrao
+int main() {
+
+	imp("youtube"); // chamando a funcao imp com argumento, só vai sair o argumento passado se não for passado nada, vai sair o valor padrao definido na funcao imp
+ 
+	return 0;
+}
+
+void imp(string txt) {
+	cout << "\n" << txt << "\n";
+
+}
