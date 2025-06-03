@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+void soma(int n1, int n2); // Declaração da função com argumentos de entrada
+void soma();
+
+int main() {
+
+	soma(30, 20); // Chamada da função com argumentos de entrada
+	soma(); // Chamada da função sem argumentos de entrada
+
+	return 0;
+}
+
+void soma(int n1, int n2) { // Sobrecarga de função, ou seja, a mesma função com parâmetros diferentes, os argumentos de entrada=()
+	// posso ter funções com o mesmo nome, mas com os argumentos de entrada diferentes
+	int re;
+	re = n1 + n2;
+	cout << "\nSoma de " << n1 << " com " << n2 << " = " << re << "\n";
+}
+
+void soma() {
+	int n1, n2,re;
+	n1 = 10;
+	n2 = 20;
+	re = n1 + n2;
+	// eu poderia somar tudo só com cout
+	cout << "Soma de " << n1 << " com " << n2 << " = " << re;
+
+}
+
